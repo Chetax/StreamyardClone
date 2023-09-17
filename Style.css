@@ -2,31 +2,64 @@
   width: 8em;
   height: 1.7em;
 }
-#custom-dropdownmenu{
-  background-colr:white;
-  border-radius:11px;
+
+#custom-dropdownmenu {
+  background-colr: white;
+  border-radius: 11px;
 }
+
 .dropdownitemli {
-  margin-left:2em;
-  margin-bottom:1.2em;
- display:flex;
-}
-.dropdownitemli a{
-   font-weight:500;
-   font-size:18px;
-}
-.ppuddles{
-  width:1.7em;
-  height:2em;
-}
-#getStartedbtn{
-     border-radius: 4px; 
-}
-@media screen and (max-width: 1199px) {
-  /* CSS styles for screens with a maximum width of 768 pixels */
-  #dropdown-togglebtn{
-  margin-right:10em;
-
-}
+  margin-left: 2em;
+  margin-bottom: 1.2em;
+  display: flex;
 }
 
+.dropdownitemli a {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.ppuddles {
+  width: 1.7em;
+  height: 2em;
+}
+
+#getStartedbtn {
+  border-radius: 4px;
+}
+
+#Info {
+  height: 50vh;
+  border: 1px solid black;
+}
+
+.img-cover {
+  width: 100px;
+}
+
+.small-image {
+  width: 15vw;
+  height: auto;
+}
+
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  }  
+to{
+transform: translateX(-100%);
+}
+}
+.logos{
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+}
+.logos-slide {
+display: inline-block;
+animation: 9s slide infinite linear;
+}
+.logos-slide img{
+  height: 5vh;
+  margin: 0 40px;
+}
