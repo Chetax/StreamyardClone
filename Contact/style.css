@@ -1,0 +1,173 @@
+*{
+margin:0;
+font-family: Arial;
+border:border-box;
+box-sizing: border-box;
+}
+header .streamyard{
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    display:flex;
+    
+}
+.logo{
+    max-width: 1352px;
+    height:88px;
+}
+
+.logo{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-right: 24px;
+    padding-bottom: 0px;
+    padding-left: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button-x{
+    display:flex;
+}
+.bar{
+    width:36px;
+    height:36px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 4px;
+    text-decoration: none;
+
+}
+.bar svg{
+ fill: rgb(121, 121, 123);
+}
+.line{
+    margin-top: 50px;
+}
+.ref{
+    padding:0px 24px 0px 24px;
+    display:block;
+}
+.phrase{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 688px;
+    margin:0px auto 0px auto;
+}
+.sentence{
+    margin-bottom: 32px;
+    display: block;
+}
+
+
+
+h1 .word{
+    margin-bottom: 16px;
+    font-size: 3.6rem;
+    line-height: 4rem;
+    text-align: center;
+    margin:0px;
+    color:rgb(0,0,0);
+    font-family: AvertaStd-Regular, Arial, "Noto Sans JP", Prompt, sans-serif;
+    font-weight: 700;
+    
+}
+.para{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    max-width: 640px;
+    margin:0px auto 0px auto;
+    text-align: center;
+}
+
+
+p .lower{
+    margin:0px;
+    color:rgb(80, 88, 104);
+    font-family: AvertaStd-Regular, Arial, "Noto Sans JP", Prompt, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+.but{
+    display:inline-block;
+
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width:90%;
+    max-width: 800px;
+    margin:0px auto 0px auto;
+}
+
+.box1{
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align:center;
+    padding:48px;
+    border:1px solid rgb(213, 213, 215);
+    border-radius: 8px;
+}
+
+h2 .src{
+    margin-bottom: 1.6rem;
+    color:black;
+    font-size:2.4rem;
+    line-height: 2.8rem;
+    font-family: AvertaStd-Regular, Arial, "Noto Sans JP", Prompt, sans-serif;
+
+}
+p .src1{
+    margin-bottom: 1.6rem;
+    color:rgb(80,88,104);
+    font-size:1.8rem;
+    line-height: 2.7rem;
+    font-family: AvertaStd-Regular, Arial, "Noto Sans JP", Prompt, sans-serif;
+}
+.you{
+    display: inline-block;
+}
+.insta{
+    display: inline-block;
+}
+.git{
+    display:inline-block;
+}
+.tweet{
+    display: inline-block;
+}
+.box2{
+    flex-direction: row;
+    text-align: left;
+
+}
+.ek{
+display:inline-block;
+}
+
+
+img{
+    border-style: none;
+}
+.imag{
+    margin-right:32px;
+    margin-top: 0px;
+    
+    width: 200px;
+    height: 150.23px;
+}

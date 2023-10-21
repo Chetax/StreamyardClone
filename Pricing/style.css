@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pack_info{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.div1{
+    width: 200px;
+    padding: 30px;
+}
+
+
+#reviews{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.rvs{
+    width: 300px;
+    padding: 30px;
+}
+
+#logo1{
+    margin-left: 0px;
+}
+
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.f1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#last{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
