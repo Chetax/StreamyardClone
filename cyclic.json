@@ -1,0 +1,6 @@
+{
+    "build": "npm install",
+    "start": "node server.js",
+    "peerjs": "peerjs --port 3001"
+  }
+  
