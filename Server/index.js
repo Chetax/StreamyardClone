@@ -12,7 +12,7 @@ const staticRoute=require('./route/staticRoute');
 const strem=require('./route/strem');
 
 const {connectotmongodb}=require('./connect');
-connectotmongodb("mongodb://127.0.0.1:27017/UserSinghup").then(()=>{console.log("Mongose Connect");})
+connectotmongodb(process.env.MONGO_URL).then(()=>{console.log("Mongose Connect");})
  
 
 
@@ -42,7 +42,8 @@ app.get('/:room', (req, res) => {
   })
 
   
+  const port=process.env.PORT||8000;
 
-server.listen(8000,()=>{
+server.listen(port,()=>{
     console.log("Server Started!!!!")
 });
