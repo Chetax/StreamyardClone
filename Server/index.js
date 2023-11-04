@@ -41,9 +41,7 @@ app.get('/:room', (req, res) => {
     })
   })
 
-  
-  const port=process.env.PORT||8000;
 
-server.listen(port,()=>{
+server.listen(8000,()=>{
     console.log("Server Started!!!!")
 });
