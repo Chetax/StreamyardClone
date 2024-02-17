@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script  src="../Public//script.js" defer ></script>
+  <title>Document</title>
+  <style>
+    #video-grid {
+      display: grid;
+      margin-right: 100px;
+      grid-template-columns: repeat(auto-fill, 300px);
+      grid-auto-rows: 300px;
+    }
+  
+    
+    video {
+      width: 100%;
+      height: 100%;
+      margin-right: 100px;
+      
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class=" h-50 w-75  ownerVideo" style="text-align:center;font-size: 30px;">
+    <p>Share Room Id : http://localhost:8000/<%= roomId %></p>
+  </div>
+  <div id="video-grid" style="margin-left: 100px;text-align: center; ">
+  </div>
+   
+</body>
+</html>
