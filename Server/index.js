@@ -12,9 +12,9 @@ const staticRoute=require('./route/staticRoute');
 const strem=require('./route/strem');
 
 const {connectotmongodb}=require('./connect');
-connectotmongodb('mongodb://127.0.0.1:27017/UserSinghup').then(()=>{console.log("Mongose Connect");})
+connectotmongodb('mongodb://localhost/User').then(()=>{console.log("Mongose Connect");})
  
-
+  
 
 
 app.set("view engine","ejs");
