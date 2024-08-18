@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useMemo } from "react";
 import {io} from 'socket.io-client'
 
-export const SockeContext=React.createContext();
+export const SockeContext=React.createContext(null);
 export const useScoket=()=>{
     return useContext(SockeContext)
 }

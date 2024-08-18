@@ -16,7 +16,8 @@ const Homepage = () => {
     [socket, roomid, email]
   );
 
-  const handlejoinedroom = useCallback((roomId) => {
+  const handlejoinedroom = useCallback((data) => {
+    const {roomId}=data;
       redirect(`/room/${roomId}`);
     },[redirect]);
 
