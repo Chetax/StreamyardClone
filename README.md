@@ -1,5 +1,4 @@
 # StreamyardClone
-## [Preview](https://vimeo.com/929483668?share=copy)
 
 A brief introduction to your project.
 
