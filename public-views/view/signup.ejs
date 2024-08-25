@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sign Up </title>
+    <link rel="icon" type="image/x-icon" href="../Public//FAVICON.svg">
+   <link rel="stylesheet" href="../Public/styles/signup.css">
+   </head>
+<body>
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <form action="/user" method="post">
+      <div class="input-box">
+        <input type="text" placeholder="Enter your name" name="name" required>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Enter your email"  name="email" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Create password" name="password" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Confirm password" name="confirmPassword" required>
+      </div>
+      
+      <div class="policy">
+        <input type="checkbox">
+        <h3>I accept all terms & condition</h3>
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Register Now">
+      </div>
+      <div class="text">
+        <h3>Already have an account? <a href="./login">Login now</a></h3>
+      </div>
+    </form>
+  </div>
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      const password = document.querySelector('input[name="password"]').value;
+      const confirmPassword = document.querySelector('input[name="confirmPassword"]').value;
+  
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        e.preventDefault(); // Prevent form submission
+      }
+    });
+  </script>
+  
+</body>
+</html>
