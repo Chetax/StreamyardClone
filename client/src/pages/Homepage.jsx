@@ -1,52 +1,61 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useScoket } from "../Context/SocketProvider";
+import { useSocket } from "../Context/SocketProvider";
 
-const Homepage = () => {
-  const redirect = useNavigate();
-  const { socket } = useScoket();
-  const [email, setemail] = useState("");
-  const [roomid, setroomid] = useState("");
+const LobbyScreen = () => {
+  const [email, setEmail] = useState("");
+  const [room, setRoom] = useState("");
 
-  const handleJoinRoom = useCallback(
+  const socket = useSocket();
+  const navigate = useNavigate();
+
+  const handleSubmitForm = useCallback(
     (e) => {
       e.preventDefault();
-      socket.emit("join-room", { roomId: roomid, emailId: email });
+      socket.emit("room:join", { email, room });
     },
-    [socket, roomid, email]
+    [email, room, socket]
   );
 
-  const handlejoinedroom = useCallback((data) => {
-    const {roomId}=data;
-      redirect(`/room/${roomId}`);
-    },[redirect]);
+  const handleJoinRoom = useCallback(
+    (data) => {
+      const { email, room } = data;
+      navigate(`/room/${room}`);
+    },
+    [navigate]
+  );
 
   useEffect(() => {
-    socket.on("joinedroom", handlejoinedroom);
+    socket.on("room:join", handleJoinRoom);
     return () => {
-      socket.off("joinedroom", handlejoinedroom);
+      socket.off("room:join", handleJoinRoom);
     };
-  }, [socket, handlejoinedroom]);
+  }, [socket, handleJoinRoom]);
 
   return (
-    <div className="homapage-container">
-      <form>
+    <div>
+      <h1>Lobby</h1>
+      <form onSubmit={handleSubmitForm}>
+        <label htmlFor="email">Email ID</label>
         <input
-          type="text"
-          placeholder="Enter Your Email here"
-          onChange={(e) => setemail(e.target.value)}
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <br />
+        <label htmlFor="room">Room Number</label>
         <input
           type="text"
-          placeholder="Enter Your Room id here"
-          onChange={(e) => setroomid(e.target.value)}
+          id="room"
+          value={room}
+          onChange={(e) => setRoom(e.target.value)}
         />
         <br />
-        <button onClick={handleJoinRoom}>Join The Room</button>
+        <button>Join</button>
       </form>
     </div>
   );
 };
 
-export default Homepage;
+export default LobbyScreen;

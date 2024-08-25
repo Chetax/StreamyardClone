@@ -2,20 +2,20 @@ import React from "react"
 
 import {Routes,Route} from 'react-router-dom'
 import Homepage from "./pages/Homepage"
-import { SocketProveider } from "./Context/SocketProvider"
+import { SocketProvider } from "./Context/SocketProvider"
 import { PeerProvider } from "./Context/Peer"
 import Roompage from "./pages/Roompage"
 const App=()=>{
 
   return(<>
-      <SocketProveider>
+      <SocketProvider>
         <PeerProvider>
      <Routes>
       <Route path="/" element={<Homepage/>}></Route>
       <Route path="/room/:room" element={<Roompage/>}></Route>
      </Routes>
      </PeerProvider>
-      </SocketProveider>
+      </SocketProvider>
   </>)
 }
 export default App;
